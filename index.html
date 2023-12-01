@@ -29,7 +29,16 @@ border-bottom-style: dotted;
   </ul>
 <video width="430" height="240" src="C:\Users\samar\OneDrive\المستندات\ProjectImportant\Shortvid.mp4" controls>
 </video>
- <script src="C:\Users\samar\OneDrive\المستندات\ProjectImportant\js.js"></script>
+ <script>
+    function ranMembers() {
+    var ul = document.getElementById('myList');
+    for (var i = ul.children.length; i >= 0; i--) {
+      ul.appendChild(ul.children[Math.random() * i | 0]);
+    }
+  }
+
+  window.onload = ranMembers;
+ </script>
 
 </body>
 </html>
